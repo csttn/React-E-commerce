@@ -7,12 +7,14 @@ import Mulheres from "./pages/Mulheres";
 import Homens from "./pages/Homens";
 import HomePage from "./pages/Homepage";
 import Shop from "./pages/shop";
+import Header from "./components/header/index";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export default function Routes() {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop/bones" component={Bones} />
