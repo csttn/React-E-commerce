@@ -8,6 +8,7 @@ import Homens from "./pages/Homens";
 import HomePage from "./pages/Homepage";
 import Shop from "./pages/shop";
 import Header from "./components/header/index";
+import Authentication from "./pages/Authentication";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -23,6 +24,7 @@ export default function Routes() {
         <Route exact path="/shop/mulheres" component={Mulheres} />
         <Route exact path="/shop/homens" component={Homens} />
         <Route exact path="/shop" component={Shop} />
+        <Route exact path="/auth" component={Authentication} />
       </Switch>
     </BrowserRouter>
   );
