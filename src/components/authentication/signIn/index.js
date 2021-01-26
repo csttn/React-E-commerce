@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import FormInput from "../../form-input";
 import CustomButton from "../../custom-buttom";
+
+import { signInWithGoogle } from "../../../utils/firebase/firebase.config";
+
 import "./styles.scss";
 
 function SignIn() {
@@ -48,6 +51,7 @@ function SignIn() {
         <CustomButton type="submit" value="Enviar">
           Entrar
         </CustomButton>
+        <CustomButton onClick={signInWithGoogle}>Login com Google</CustomButton>
       </form>
     </div>
   );
