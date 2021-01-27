@@ -48,10 +48,15 @@ function SignIn() {
           handleChange={handleChange}
           label="Senha"
         />
-        <CustomButton type="submit" value="Enviar">
-          Entrar
-        </CustomButton>
-        <CustomButton onClick={signInWithGoogle}>Login com Google</CustomButton>
+
+        <div className="buttons">
+          <CustomButton type="submit" value="Enviar">
+            Entrar
+          </CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            Login com Google
+          </CustomButton>
+        </div>
       </form>
     </div>
   );
