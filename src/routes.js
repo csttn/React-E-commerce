@@ -6,7 +6,7 @@ import Tenis from "./pages/Tenis";
 import Mulheres from "./pages/Mulheres";
 import Homens from "./pages/Homens";
 import HomePage from "./pages/Homepage";
-import Shop from "./pages/shop";
+import Shop from "./pages/Shop";
 import Header from "./components/header/index";
 import Authentication from "./pages/Authentication";
 import { auth } from "./utils/firebase/firebase.config";
