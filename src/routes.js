@@ -9,25 +9,36 @@ import HomePage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import Header from "./components/header/index";
 import Authentication from "./pages/Authentication";
-import { auth } from "./utils/firebase/firebase.config";
+import {
+  auth,
+  createUserProfileDocument,
+} from "./utils/firebase/firebase.config";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export default function Routes() {
   const [currentUser, setCurrentUser] = useState(null);
 
-  let logout = null;
-
   useEffect(() => {
-    logout = auth.onAuthStateChanged((user) => {
-      setCurrentUser(user);
+    let logout = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot((snapShot) => {
+          setCurrentUser({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      }
+      setCurrentUser({ currentUser: userAuth });
       console.log(currentUser);
-      console.log("didmount");
     });
 
     return function cleanup() {
       logout();
-      console.log("unmount");
     };
   }, []);
 

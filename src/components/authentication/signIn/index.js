@@ -8,8 +8,12 @@ import { signInWithGoogle } from "../../../utils/firebase/firebase.config";
 import "./styles.scss";
 
 function SignIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [useCredentials, setUseCredentials] = useState({
+    email: "",
+    password: "",
+  });
+
+  const { email, password } = useCredentials;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,11 +24,7 @@ function SignIn() {
     e.preventDefault();
     const { value, name } = e.target;
 
-    if (name === "password") {
-      setPassword(value);
-    } else {
-      setEmail(value);
-    }
+    setUseCredentials({ ...useCredentials, [name]: value });
   };
 
   return (
