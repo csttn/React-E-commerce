@@ -33,8 +33,7 @@ export default function Routes() {
           });
         });
       }
-      setCurrentUser({ currentUser: userAuth });
-      console.log(currentUser);
+      setCurrentUser(userAuth);
     });
 
     return function cleanup() {

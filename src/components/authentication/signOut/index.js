@@ -43,8 +43,6 @@ function SignOut() {
     } catch (error) {
       console.log(error);
     }
-
-    console.log(useCredentials);
   };
 
   const handleChange = (e) => {
