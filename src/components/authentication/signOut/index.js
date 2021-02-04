@@ -11,14 +11,14 @@ import {
 import "./styles.scss";
 
 function SignOut() {
-  const [useCredentials, setUseCredentials] = useState({
+  const [userCredentials, setUserCredentials] = useState({
     displayName: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
 
-  const { displayName, email, password, confirmPassword } = useCredentials;
+  const { displayName, email, password, confirmPassword } = userCredentials;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ function SignOut() {
 
       await createUserProfileDocument(user, { displayName });
 
-      setUseCredentials({
+      setUserCredentials({
         displayName: "",
         email: "",
         password: "",
@@ -44,14 +44,13 @@ function SignOut() {
       console.log(error);
     }
 
-    console.log(useCredentials);
+    console.log(userCredentials);
   };
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    const { value, name } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-    setUseCredentials({ ...useCredentials, [name]: value });
+    setUserCredentials({ ...userCredentials, [name]: value });
   };
 
   return (
