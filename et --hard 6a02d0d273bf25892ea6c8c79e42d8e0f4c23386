@@ -1,0 +1,65 @@
+[33mcommit 6a02d0d273bf25892ea6c8c79e42d8e0f4c23386[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Wed Feb 3 23:34:50 2021 -0300
+
+    alinhamento do projeto realizado (checkup antes do redux)
+
+[33mcommit 29f2081a87da8a8d8ef500fd575e8428cf4e5141[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Tue Feb 2 21:11:33 2021 -0300
+
+    Creation of the registration and initialization component with the integration of firebase registration
+
+[33mcommit b02ddf3f087a7fabca59edbeedcd93a23b585342[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Fri Jan 29 21:56:00 2021 -0300
+
+    [200~authentication structuring performed in firebase
+
+[33mcommit 6ec09c00ed40c04b21c27bd2afa9cd4a69ca50a1[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Wed Jan 27 16:41:08 2021 -0300
+
+    integrated firebase into application, created sign in page with sign component and sign in with google
+
+[33mcommit c28e18e59ee337da62a5b36e97e1bb51e52c0cbf[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Tue Jan 26 20:21:04 2021 -0300
+
+    initialized firebase settings
+
+[33mcommit 0f19fec0b99aa99d5647369e1055172008e3eeaf[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Mon Jan 25 20:45:04 2021 -0300
+
+    completed authentication form
+
+[33mcommit e2cf02cd4eb58acb4071f4bf6d58cd5375d41d91[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Tue Jan 19 18:19:53 2021 -0300
+
+    adding header component and links to home, shop page and contact
+
+[33mcommit 95dc2da360836903b719ea9b28fffb1008bdda01[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Sat Jan 9 21:18:00 2021 -0300
+
+    initialized shop page
+
+[33mcommit 0d92d9e1df28513371dda495890a63ae0e0cecb5[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Wed Jan 6 17:51:28 2021 -0300
+
+    homepag finish with static components
+
+[33mcommit 4f30cc2c3083a88f992e08aab2b680c1749f2c6e[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Tue Jan 5 15:50:27 2021 -0300
+
+    start of home page
+
+[33mcommit c2ab2bd95723b201ac7563685909c72825f69cdc[m
+Author: csttn <csttn.dev@gmail.com>
+Date:   Tue Jan 5 14:31:48 2021 -0300
+
+    Initialize project using Create React App

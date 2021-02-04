@@ -38,6 +38,10 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(currentUser);
+  }, [currentUser]);
+
   return (
     <BrowserRouter>
       <Header currentUser={currentUser} />
