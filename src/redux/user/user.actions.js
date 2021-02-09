@@ -51,6 +51,7 @@ export const signUpFailure = (error) => ({
   payload: error,
 });
 
+//apagar esta linha de codigo apos refatorar
 export const setCurrentUser = (user) => ({
   type: "SET_CURRENT_USER",
   payload: user,

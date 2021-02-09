@@ -5,6 +5,12 @@ import rootReducer from "./root-reducer";
 
 const middlewares = [logger];
 
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+//ativando extenção reduxDev Tools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(...middlewares))
+);
 
 export default store;
