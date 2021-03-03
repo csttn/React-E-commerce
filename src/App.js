@@ -9,7 +9,7 @@ import {
   createUserProfileDocument,
 } from "./utils/firebase/firebase.config";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
@@ -41,14 +41,14 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <>
       <Header currentUser={currentUser} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/auth" component={Authentication} />
       </Switch>
-    </BrowserRouter>
+    </>
   );
 }
 
