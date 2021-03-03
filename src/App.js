@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import HomePage from "./pages/Homepage";
 import Shop from "./pages/Shop";
@@ -9,14 +9,14 @@ import {
   createUserProfileDocument,
 } from "./utils/firebase/firebase.config";
 
+import { connect } from "react-redux";
+import { setCurrentUser } from "./redux/user/user.actions";
+
 import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
-function App() {
-  const [currentUser, setCurrentUser] = useState();
-  console.log(currentUser);
-
+function App({ setCurrentUser }) {
   useEffect(() => {
     let logout = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -24,10 +24,8 @@ function App() {
 
         userRef.onSnapshot((snapShot) => {
           setCurrentUser({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data(),
-            },
+            id: snapShot.id,
+            ...snapShot.data(),
           });
         });
       } else {
@@ -42,7 +40,7 @@ function App() {
 
   return (
     <>
-      <Header currentUser={currentUser} />
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={Shop} />
@@ -52,4 +50,8 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+});
+
+export default connect(null, mapDispatchToProps)(App);
