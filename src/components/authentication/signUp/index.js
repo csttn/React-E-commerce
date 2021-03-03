@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import CustomButton from "../../custom-buttom";
+import CustomButton from "../../custom-button";
 import FormInput from "../../form-input";
 
 import {
