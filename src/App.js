@@ -12,11 +12,11 @@ import {
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import "./App.css";
 
-function App({ setCurrentUser }) {
+function App({ setCurrentUser, currentUser }) {
   useEffect(() => {
     let logout = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -44,14 +44,24 @@ function App({ setCurrentUser }) {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={Shop} />
-        <Route exact path="/auth" component={Authentication} />
+        <Route
+          exact
+          path="/auth"
+          render={() =>
+            currentUser ? <Redirect to="/" /> : <Authentication />
+          }
+        />
       </Switch>
     </>
   );
 }
 
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser,
+});
+
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
