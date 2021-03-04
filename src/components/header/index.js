@@ -26,11 +26,11 @@ function Header({ currentUser, hidden }) {
         </Link>
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
-            Logout
+            Sair
           </div>
         ) : (
           <Link className="option" to="/auth">
-            Login
+            Entrar
           </Link>
         )}
         <Cart />
