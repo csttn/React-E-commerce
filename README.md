@@ -1,4 +1,4 @@
-# Ecommerce (Development application)
+# Ecommerce (Aplicação em desenvolvimento)
 
 Ecommerce feito totalmente em React com as bibliotecas mencionadas abaixo
 
