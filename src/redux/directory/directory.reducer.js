@@ -38,7 +38,7 @@ const INITIAL_STATE = {
 const directoryReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "TESTE":
-      return "merda";
+      return "directory recuder";
     default:
       return state;
   }

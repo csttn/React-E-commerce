@@ -1,4 +1,4 @@
-const SHOP_DATA = [
+const INITIAL_STATE = [
   {
     id: 888,
     title: "Bonés",
@@ -246,4 +246,13 @@ const SHOP_DATA = [
   },
 ];
 
-export default SHOP_DATA;
+const shopReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case "TESTE":
+      return "shop reducer";
+    default:
+      return state;
+  }
+};
+
+export default shopReducer;
