@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import "./styles.scss";
 import { connect } from "react-redux";
 import {
   selectCartTotal,
@@ -8,7 +7,10 @@ import {
   selectCartHidden,
 } from "../../redux/cart/cart.selectors";
 import { createStructuredSelector } from "reselect";
-import { toggleCartHidden } from "../../redux/cart/cart.actions";
+
+import CheckoutItem from "../../components/checkout-item/index";
+
+import "./styles.scss";
 
 function Checkout({ cartItems, total }) {
   return (
@@ -31,7 +33,9 @@ function Checkout({ cartItems, total }) {
         </div>
       </div>
 
-      {cartItems.map((cartItem) => cartItem.name)}
+      {cartItems.map((cartItem) => (
+        <CheckoutItem cartItem={cartItem} key={cartItem.id} />
+      ))}
       <div className="total">TOTAL: R$ {total}</div>
     </div>
   );
