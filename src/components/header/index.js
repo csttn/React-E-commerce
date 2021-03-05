@@ -25,7 +25,7 @@ function Header({ currentUser, hidden }) {
         <Link to="/shop" className="option">
           Shopping
         </Link>
-        <Link to="/shop" className="option">
+        <Link to="/" className="option">
           Contato
         </Link>
         {currentUser ? (
