@@ -26,10 +26,6 @@ Ecommerce feito totalmente em React com as bibliotecas mencionadas abaixo
 - **State Normalization**
   e muito mais
 
-## Projeto publico em:
-
-- [Heroku](https://expensify-csttn.herokuapp.com/)
-
 ## Atenção:
 
 Esse projeto está vinculado a contas privadas no firabase, caso prentenda efetuar o download esteja ciente.
