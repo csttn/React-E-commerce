@@ -5,23 +5,26 @@ Ecommerce feito totalmente em React com as bibliotecas mencionadas abaixo
 ## Tecnologias e Ferramentas utilizadas:
 
 - **React**
+- **React Routerx**
 - **Redux**
-- **Redux-Saga**
+- **Redux Saga**
 - **Asynchronous Redux**
+- **React Hooks**
 - **Context API**
-- **Optimization for React Performance**
-- **Css - Css Flexbox**
-- **GraphQL + Apollo**
-- **Mobile Support**
-- **Progressive Web App**
-- **Test with Jest**
+- **React Suspense + React Lazy**
 - **Firebase**
+- **Stripe API**
+- **GraphQL**
+- **Apollo**
 - **Sass**
-- **Storage**
-- **Styled-Components**
-- **Stripe Payments**
-
-and many others...
+- **PWAs**
+- **React Performance**
+- **React Design Patterns**
+- **Teste com Jest, Enzyme e Snapshot**
+- **Boas Praticas do React**
+- **Persistencia + Session Storage**
+- **State Normalization**
+  e muito mais
 
 ## Projeto publico em:
 
