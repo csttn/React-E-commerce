@@ -21,8 +21,8 @@ Ecommerce feito totalmente em React com as bibliotecas mencionadas abaixo
 - **React Performance**
 - **React Design Patterns**
 - **Teste com Jest, Enzyme e Snapshot**
-- **Boas Praticas do React**
-- **Persistencia + Session Storage**
+- **Boas Praticas**
+- **Persistência + Session Storage**
 - **State Normalization**
   e muito mais
 

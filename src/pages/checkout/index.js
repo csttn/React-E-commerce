@@ -1,5 +1,7 @@
 import React from "react";
 
+import StripeCheckoutButton from "../../components/stripe-button/index";
+
 import { connect } from "react-redux";
 import {
   selectCartTotal,
@@ -37,6 +39,13 @@ function Checkout({ cartItems, total }) {
         <CheckoutItem cartItem={cartItem} key={cartItem.id} />
       ))}
       <div className="total">TOTAL: R$ {total}</div>
+
+      <div className="test-warning">
+        *Por favor, use este cartão de crédito para pagamentos
+        <br />
+        4242 4242 4242 4242 - Exp:01/22 cod:123
+      </div>
+      <StripeCheckoutButton price={total} />
     </div>
   );
 }

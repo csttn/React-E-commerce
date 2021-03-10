@@ -4,7 +4,7 @@ import HomePage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import Header from "./components/header/index";
 import Authentication from "./pages/Authentication";
-import CheckoutPage from "./pages/Checkout/index";
+import CheckoutPage from "./pages/checkout/index";
 import {
   auth,
   createUserProfileDocument,
