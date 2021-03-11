@@ -30,6 +30,10 @@ Ecommerce feito totalmente em React com as bibliotecas mencionadas abaixo
 
 Esse projeto está vinculado a contas privadas no firabase, caso prentenda efetuar o download esteja ciente.
 
+## Projeto publico em:
+
+- [Heroku](https://react-ecommerce-csttn.herokuapp.com/)
+
 ### Instalação
 
 Comando necessário para intalação de dependências, após realizar o download:
